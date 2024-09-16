@@ -1,0 +1,27 @@
+<p>get-api works!</p>
+<app-for-alert [alertType]="'success'" [message]="'message from get'"></app-for-alert>
+<div class="row">
+    <div class="col-2">
+        <button class="btn btn-primary"
+        (click)="getAllCustomer()">
+            Get USer
+        </button>
+    </div>
+    <div class="col-3">
+        <select class="form-select">
+            @for(item of userList ;track $index){
+                <option value="">{{item.name}}</option>
+
+            }
+        </select>
+    </div>
+
+    <div class="col-3">
+        <select class="form-select">
+            @for(item of customList ;track $index){
+                <option value="">{{item.userName}}</option>
+
+            }
+        </select>
+    </div>
+</div>
